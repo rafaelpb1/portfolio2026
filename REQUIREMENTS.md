@@ -19,7 +19,7 @@ Site pessoal para apresentar Rafael Luna de Souza (estudante de Ciência da Comp
 - Contato via links diretos: WhatsApp (mensagem pré-definida), e-mail (mailto), GitHub, LinkedIn.
 - Dados de projetos isolados em arquivo editável (`data/projects.ts`) — serão refinados quando o usuário enviar mais detalhes (links de repositório + explicação de cada projeto).
 - SEO básico (metadata, sitemap, robots, JSON-LD Person) e acessibilidade (WCAG AA).
-- Deploy alvo: Vercel, domínio `rafael-luna-dev.vercel.app` (execução do deploy fica para uma etapa posterior, com aprovação explícita do usuário).
+- Deploy: Vercel, domínio `souza-rafael.vercel.app` (o domínio original planejado, `rafael-luna-dev.vercel.app`, está ocupado por um portfólio antigo em outra conta Vercel).
 
 ## Fora de escopo (nesta fase)
 

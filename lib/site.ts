@@ -1,4 +1,4 @@
-export const SITE_URL = "https://rafael-luna-dev.vercel.app";
+export const SITE_URL = "https://souza-rafael.vercel.app";
 export const SITE_NAME = "Rafael Luna de Souza";
 export const SITE_TITLE = "Rafael Luna de Souza, Desenvolvedor";
 export const SITE_DESCRIPTION =

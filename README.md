@@ -10,7 +10,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?logo=tailwindcss&logoColor=white)](https://tailwindcss.com)
 [![Framer Motion](https://img.shields.io/badge/Framer_Motion-12-0055FF?logo=framer&logoColor=white)](https://www.framer.com/motion/)
 
-🔗 Deploy alvo: [`rafael-luna-dev.vercel.app`](https://rafael-luna-dev.vercel.app)
+🔗 No ar em: [`souza-rafael.vercel.app`](https://souza-rafael.vercel.app)
 
 </div>
 
