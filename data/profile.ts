@@ -3,7 +3,7 @@ export const profile = {
   role: "Estudante de Ciência da Computação & Desenvolvedor",
   location: "João Pessoa, PB",
   photo: "/images/rafael-photo.jpg",
-  cvUrl: "/cv/rafael-luna-cv.pdf",
+  cvUrl: "/cv/Rafael_Luna_De_Souza_CV.pdf",
   cvDownloadName: "Rafael_Luna_De_Souza_CV.pdf",
   email: "rafaelluna10@hotmail.com",
   whatsapp: {
