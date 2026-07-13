@@ -4,6 +4,7 @@ export const profile = {
   location: "João Pessoa, PB",
   photo: "/images/rafael-photo.jpg",
   cvUrl: "/cv/rafael-luna-cv.pdf",
+  cvDownloadName: "Rafael_Luna_De_Souza_CV.pdf",
   email: "rafaelluna10@hotmail.com",
   whatsapp: {
     number: "5583996076779",

@@ -32,7 +32,7 @@ export function Contact() {
   const methods: ContactMethod[] = [
     {
       label: "WhatsApp",
-      value: "Falar agora",
+      value: "Entre em contato agora",
       href: whatsappLink,
       icon: WhatsappIcon,
       external: true,
@@ -66,7 +66,7 @@ export function Contact() {
           align="center"
           eyebrow="Contato"
           title="Vamos conversar?"
-          description="Estou aberto a oportunidades de estágio, projetos e trocas com outros desenvolvedores. Escolha o canal que preferir."
+          description="Disponível paraa oportunidades, projetos e trocas com outros desenvolvedores. Escolha o canal que preferir."
           className="mx-auto"
         />
 
@@ -106,7 +106,7 @@ export function Contact() {
         </motion.div>
 
         <div className="mt-8 flex justify-center">
-          <Button href={profile.cvUrl} size="lg" download>
+          <Button href={profile.cvUrl} size="lg" download={profile.cvDownloadName}>
             <Download className="h-4 w-4" aria-hidden="true" />
             Baixar currículo em PDF
           </Button>
