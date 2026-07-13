@@ -97,6 +97,15 @@
   }
 }
 
+.card-gradient-border {
+  border: 1px solid transparent;
+  background-image:
+    linear-gradient(var(--color-card), var(--color-card)),
+    linear-gradient(135deg, color-mix(in oklab, var(--color-accent) 35%, transparent), var(--color-border));
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;
