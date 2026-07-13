@@ -60,19 +60,24 @@ export function Hero() {
             <Button href={whatsappLink} size="lg" target="_blank" rel="noopener noreferrer">
               Falar no WhatsApp
             </Button>
-            <Button href={profile.cvUrl} size="lg" variant="outline" download>
+            <Button
+              href={profile.cvUrl}
+              size="lg"
+              variant="outline"
+              download={profile.cvDownloadName}
+            >
               <Download className="h-4 w-4" aria-hidden="true" />
               Baixar CV
             </Button>
           </motion.div>
 
-          <motion.div variants={item} className="flex items-center gap-4 pt-2">
+          <motion.div variants={item} className="flex items-center gap-2 pt-2">
             <a
               href={profile.social.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub de Rafael Luna"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="rounded-full p-2 text-muted-foreground transition-colors hover:text-foreground"
             >
               <GithubIcon className="h-5 w-5" aria-hidden="true" />
             </a>
@@ -81,7 +86,7 @@ export function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn de Rafael Luna"
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="rounded-full p-2 text-muted-foreground transition-colors hover:text-foreground"
             >
               <LinkedinIcon className="h-5 w-5" aria-hidden="true" />
             </a>

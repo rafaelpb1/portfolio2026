@@ -52,7 +52,7 @@ export function Projects() {
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={`Ver repositório de ${project.title} no GitHub`}
-                      className="shrink-0 text-muted-foreground transition-colors hover:text-foreground"
+                      className="-m-2 shrink-0 rounded-full p-2 text-muted-foreground transition-colors hover:text-foreground"
                     >
                       <GithubIcon className="h-5 w-5" aria-hidden="true" />
                     </a>

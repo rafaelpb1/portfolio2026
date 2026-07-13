@@ -2,11 +2,11 @@
 
 import { AnimatePresence, motion } from "framer-motion";
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { profile } from "@/data/profile";
-import { buildWhatsAppLink } from "@/lib/utils";
+import { buildWhatsAppLink, cn } from "@/lib/utils";
 
 const NAV_LINKS = [
   { href: "#sobre", label: "Sobre" },
@@ -18,10 +18,30 @@ const NAV_LINKS = [
 
 export function Header() {
   const [open, setOpen] = useState(false);
+  const [activeHref, setActiveHref] = useState<string>("");
   const whatsappLink = buildWhatsAppLink(
     profile.whatsapp.number,
     profile.whatsapp.message
   );
+
+  useEffect(() => {
+    const sections = NAV_LINKS.map((link) =>
+      document.getElementById(link.href.slice(1))
+    ).filter((el): el is HTMLElement => el !== null);
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.find((entry) => entry.isIntersecting);
+        if (visible) {
+          setActiveHref(`#${visible.target.id}`);
+        }
+      },
+      { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/80 bg-background/80 backdrop-blur-md">
@@ -38,7 +58,13 @@ export function Header() {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+              aria-current={activeHref === link.href ? "true" : undefined}
+              className={cn(
+                "text-sm font-medium transition-colors hover:text-foreground",
+                activeHref === link.href
+                  ? "font-semibold text-foreground"
+                  : "text-muted-foreground"
+              )}
             >
               {link.label}
             </a>
@@ -82,7 +108,13 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-muted hover:text-foreground"
+                  aria-current={activeHref === link.href ? "true" : undefined}
+                  className={cn(
+                    "rounded-lg px-3 py-2.5 text-sm font-medium hover:bg-muted hover:text-foreground",
+                    activeHref === link.href
+                      ? "font-semibold text-foreground"
+                      : "text-muted-foreground"
+                  )}
                 >
                   {link.label}
                 </a>
