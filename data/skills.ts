@@ -28,22 +28,14 @@ export const skills: SkillCategory[] = [
       "AWS (em estudo)",
     ],
   },
+  {
+    category: "Soft Skills",
+    items: [
+      "Gerenciamento de tempo",
+      "Comunicação",
+      "Trabalho em equipe",
+      "Adaptabilidade",
+      "Resolução de problemas",
+    ],
+  },
 ];
-
-export const certifications = [
-  {
-    title: "Introdução à Análise de Dados com Power BI",
-    issuer: "Curso livre",
-    hours: "5h",
-  },
-  {
-    title: "Fundamentos de HTML",
-    issuer: "DevMedia",
-    hours: "7h",
-  },
-  {
-    title: "CSS: Propriedades",
-    issuer: "DevMedia",
-    hours: "11h",
-  },
-] as const;
