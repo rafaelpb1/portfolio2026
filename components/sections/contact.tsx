@@ -66,7 +66,7 @@ export function Contact() {
           align="center"
           eyebrow="Contato"
           title="Vamos conversar?"
-          description="Disponível paraa oportunidades, projetos e trocas com outros desenvolvedores. Escolha o canal que preferir."
+          description="Disponível para oportunidades, projetos e trocas com outros desenvolvedores. Escolha o canal que preferir."
           className="mx-auto"
         />
 
