@@ -23,7 +23,7 @@ export function Projects() {
         <SectionHeading
           eyebrow="Projetos"
           title="O que já construí"
-          description="Uma seleção dos projetos descritos no meu currículo. Os detalhes completos de cada um chegam em breve."
+          description="Uma seleção dos projetos em que coloquei mais mão na massa, do backend em Java/Spring ao meu primeiro app mobile."
         />
 
         <motion.div
