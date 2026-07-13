@@ -7,42 +7,58 @@ export type Project = {
   demoUrl?: string;
 };
 
-// Conteúdo inicial extraído do CV e do GitHub (rafaelpb1). Rafael vai enviar
-// descrições e links mais detalhados depois, basta editar este arquivo.
+// Seleção curada por Rafael dos projetos mais representativos do seu percurso.
 export const projects: Project[] = [
   {
-    slug: "concessionaria-api",
-    title: "Sistema de Gestão de Concessionária",
+    slug: "library-api",
+    title: "Library API",
     description:
-      "API REST para gerenciamento completo de uma concessionária: usuários, clientes, funcionários, veículos e vendas. Autenticação JWT com perfis ADMIN/USER, arquitetura em camadas (controller/service/repository), DTOs para desacoplamento, mapeamento com MapStruct e documentação interativa com Swagger/OpenAPI.",
-    tech: ["Java", "Spring Boot", "JWT", "Swagger/OpenAPI", "MapStruct"],
-    githubUrl: "https://github.com/rafaelpb1/vehiclesale",  },
-  {
-    slug: "todo-list-api",
-    title: "Sistema de Gerenciamento de Tarefas (ToDo List)",
-    description:
-      "Backend completo com autenticação de usuários e CRUD de tarefas, construído com foco em escalabilidade, organização de código e integração entre camadas.",
-    tech: ["Node.js", "TypeScript", "Express", "Prisma", "PostgreSQL"],
-    githubUrl: "https://github.com/rafaelpb1/api-express-typescript",  },
-  {
-    slug: "sistema-biblioteca",
-    title: "Sistema de Biblioteca",
-    description:
-      "Simulação de uma biblioteca com cadastro e listagem de livros, usuários e empréstimos. Planejado com diagrama UML antes da implementação, aplicando encapsulamento, herança e polimorfismo, com interface via terminal.",
-    tech: ["Java", "POO", "UML"],
-    githubUrl: "https://github.com/rafaelpb1/sis_biblioteca",  },
-  {
-    slug: "gerenciamento-contatos",
-    title: "Gerenciamento de Contatos Pessoais",
-    description:
-      "Aplicação web para organizar contatos pessoais, pensada para ser multifuncional e adaptável a diferentes necessidades, sejam pessoais ou profissionais.",
-    tech: ["PHP", "JavaScript", "SQL"],
+      "API REST para gerenciamento de biblioteca (autores e livros), com autenticação e autorização por perfil (OPERADOR/GERENTE) via Spring Security e regras de negócio de domínio, como o bloqueio de exclusão de autores com livros vinculados. Desenvolvido durante curso de Java/Spring, consolidando arquitetura em camadas, autenticação/autorização e tratamento de erros padronizado.",
+    tech: [
+      "Java 21",
+      "Spring Boot 4",
+      "Spring Security",
+      "Spring Data JPA",
+      "PostgreSQL",
+      "HikariCP",
+      "MapStruct",
+      "Swagger/OpenAPI",
+    ],
+    githubUrl: "https://github.com/rafaelpb1/libraryapi",
   },
   {
-    slug: "jogo-da-forca",
-    title: "Jogo da Forca",
+    slug: "vehicle-sale",
+    title: "Vehicle Sale",
     description:
-      "Programa em que o jogador tenta adivinhar uma palavra oculta, letra por letra, dentro de um número limitado de tentativas, praticando manipulação de strings e estruturas de repetição.",
-    tech: ["C"],
+      "Sistema de gestão para concessionária de veículos, com módulos de clientes, funcionários, veículos e vendas. Autenticação JWT com matriz de permissões por perfil (ADMIN/USER) e máquina de estados para o ciclo de vida do veículo (AVAILABLE → SOLD). Frontend em React em desenvolvimento, consumindo a API REST documentada via Swagger.",
+    tech: [
+      "Java 17",
+      "Spring Boot 4",
+      "Spring Security",
+      "JWT",
+      "React 19",
+      "TypeScript",
+      "Vite",
+      "H2",
+      "Swagger/OpenAPI",
+    ],
+    githubUrl: "https://github.com/rafaelpb1/vehiclesale",
+  },
+  {
+    slug: "aws-sqs-lab",
+    title: "AWS SQS Lab",
+    description:
+      "Laboratório de estudo sobre mensageria assíncrona com Amazon SQS, simulado localmente via LocalStack para praticar sem custos na conta AWS. Aplica princípios SOLID (Dependency Inversion, Single Responsibility) em um exemplo enxuto e bem documentado, com padrão Producer/Consumer. Desenvolvido como parte da preparação para a certificação AWS Cloud Practitioner (CLF-C02).",
+    tech: ["Java 21", "Spring Boot 4", "Spring Cloud AWS", "AWS SDK v2", "LocalStack"],
+    githubUrl: "https://github.com/rafaelpb1/awscloudsqs",
+  },
+  {
+    slug: "apuraqui",
+    title: "ApurAqui",
+    // TODO: ajustar com a contribuição específica de Rafael no grupo antes de publicar.
+    description:
+      "Aplicativo mobile de apoio ao eleitor brasileiro, com santinhos digitais, comparador de propostas, checklist de votação e dashboard de apuração. Design system próprio adaptado do GOV.BR-DS, com boa separação entre dados mockados e futura integração com API. Projeto em equipe de 5 pessoas para a disciplina de Desenvolvimento Mobile do UNIPÊ.",
+    tech: ["Flutter 3", "Dart 3", "Riverpod 3", "Drift (SQLite)"],
+    githubUrl: "https://github.com/Giyuulol/apuraqui",
   },
 ];
