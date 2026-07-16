@@ -5,6 +5,7 @@ import { Download } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { GithubIcon, LinkedinIcon } from "@/components/icons/brand-icons";
+import { GridSpotlightBackground } from "@/components/grid-spotlight-background";
 import { profile } from "@/data/profile";
 import { fadeInUp, staggerContainer } from "@/lib/motion-variants";
 import { buildWhatsAppLink } from "@/lib/utils";
@@ -24,6 +25,8 @@ export function Hero() {
       id="topo"
       className="relative overflow-hidden px-4 pt-16 pb-20 sm:px-6 sm:pt-20 sm:pb-28 lg:px-8"
     >
+      <GridSpotlightBackground />
+
       <div className="mx-auto grid max-w-6xl items-center gap-12 lg:grid-cols-12">
         <motion.div
           initial="hidden"
